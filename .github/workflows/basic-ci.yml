@@ -9,6 +9,13 @@ on:
 
 # Trabajos a ejecutar
 jobs:
+  secretos-variables:
+   runs-on: ubuntu-latest
+   steps:
+   - name: usar secreto
+     run: echo $ {{ secrets.PASSWORD }}
+   - name: usar variable
+     run : echo ${{ vars.LOG_LEVEL }} 
   analisis-basico:
     # Runner a utilizar
     runs-on: ubuntu-latest
