@@ -17,6 +17,7 @@ jobs:
    - name: usar variable
      run : echo ${{ vars.LOG_LEVEL }} 
   analisis-basico:
+    needs: secretos-variables
     # Runner a utilizar
     runs-on: ubuntu-latest
     
